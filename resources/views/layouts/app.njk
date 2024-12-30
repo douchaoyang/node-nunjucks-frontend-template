@@ -1,0 +1,15 @@
+{% extends "layouts/root.njk" %}
+{% block layout %}
+  {% block header %}
+    {% include "public/components/LayoutHeader.njk" %}
+  {% endblock %}
+  <div class="layout-main">
+    <div class="main-left"></div>
+    <div class="main-right">
+      {% block main %}{% endblock %}
+    </div>
+  </div>
+  {% block footer %}
+    <div class="layout-footer"></div>
+  {% endblock %}
+{% endblock %}

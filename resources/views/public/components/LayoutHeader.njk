@@ -1,0 +1,55 @@
+<div class="layout-header">
+  <div class="header-main">
+    <div class="header-main-left">
+      <div class="business-nav">
+        <ul>
+          {% for item in HeaderLink %}
+            <li class="nav-wrapper">
+              <div class="nav-label">
+                <a 
+                {% if item.label.href %}href="{{ item.label.href }}"{% endif %}
+                {% if item.label.blank %}target="_blank"{% endif %}
+                >{{ item.label.title }}</a>
+              </div>
+              {% if item.sub %}
+                <div class="sub-nav-wrapper">
+                  {% for sub in item.sub %}
+                    <div class="sub-nav-item">
+                      <a 
+                      class="sub-nav-name" 
+                      {% if sub.href %}href="{{ sub.href }}"{% endif %}
+                      {% if sub.blank %}target="_blank"{% endif %}
+                      {% if sub.qrcode %}qrcode="{{ sub.qrcode | dump }}"{% endif %}
+                      >
+                        <span>{{ sub.title }}</span>
+                      </a>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="wise-entry">
+        <div class="wise-entry-box">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="" target="_blank">
+                <img src="" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-main-right">
+      <div class="header-search-entry">
+        <span>搜索</span>
+      </div>
+      <div class="user-login-button">
+        <span>登录</span>
+      </div>
+    </div>
+  </div>
+</div>

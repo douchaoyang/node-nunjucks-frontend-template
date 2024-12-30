@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}"/>
+    <title>
+      {% block title %}{% endblock %} - Nunjucks Frontend
+    </title>
+    {% for css in entrypoints[entrypath]["css"] %}
+      <link rel="stylesheet" href="{{ css }}">
+    {% endfor %}
+  </head>
+  <body>
+    <div id="app">
+      <div class="app-layout">
+        {% block layout %}{% endblock %}
+      </div>
+    </div>
+    <script src="{{ asset('libs/jquery.min.js') }}"></script>
+    {% for js in entrypoints[entrypath]["js"] %}
+      <script src="{{ js }}"></script>
+    {% endfor %}
+  </body>
+</html>

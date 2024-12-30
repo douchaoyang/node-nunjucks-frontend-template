@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "app",
+    "resources/views"
+  ],
+  "exec": "cross-env NODE_ENV=development node app/app.js",
+  "ext": "js njk"
+}

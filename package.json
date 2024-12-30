@@ -1,0 +1,66 @@
+{
+  "name": "nunjucks-frontend",
+  "version": "1.0.0",
+  "description": "前端构建系统",
+  "private": true,
+  "author": {
+    "name": "Chaoyang Dou",
+    "email": "douchaoyang@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "pnpm dev --progress & pnpm serve",
+    "serve": "nodemon",
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js",
+    "pre": "cross-env NODE_ENV=preview webpack --config webpack.pre.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.20.1",
+    "autoprefixer": "9.4.7",
+    "axios": "^0.21.1",
+    "core-js": "^3.8.3",
+    "es6-promise": "^4.2.8",
+    "express": "^4.21.2",
+    "nunjucks": "^3.2.4",
+    "swiper": "^3.4.2",
+    "vue": "^3.5.13",
+    "vue-loader": "^17.4.2",
+    "vue-style-loader": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/preset-env": "^7.25.3",
+    "babel-loader": "^9.1.3",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.13.8",
+    "copy-webpack-plugin": "12.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "mini-css-extract-plugin": "2.9.0",
+    "postcss-import": "12.0.1",
+    "postcss-loader": "3.0.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "stylus": "^0.64.0",
+    "stylus-loader": "^8.1.1",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "5.93.0",
+    "webpack-assets-manifest": "^5.2.1",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.0.4",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-merge": "6.0.1"
+  },
+  "engines": {
+    "node": "^20.16.0",
+    "npm": "^10.8.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "not dead"
+  ]
+}

@@ -1,0 +1,68 @@
+a, b, body, button, blockquote, canvas, dd, div, dl, dt, em, fieldset, form, footer, frame, frameset, h1, h2, h3, h4, h5, h6, header, i, iframe, img, input, label, li, main, nav, ol, optgroup, p, pre, section, select, span, strong, table, tr, thead, th, tbody, td, textarea, ul, video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  word-break: break-word;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'PingFang SC', 'Microsoft YaHei', Arial, 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #262626;
+  position: relative;
+  overflow-x: hidden;
+}
+
+em, strong, th, i, b {
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+}
+
+a:hover, a:active {
+  outline-width: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol, ul, li {
+  list-style: none outside none;
+}
+
+input {
+  border: 0;
+  outline: 0;
+
+  &::-webkit-credentials-auto-fill-button, &::-webkit-contacts-auto-fill-button {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+  }
+
+  &:focus::-webkit-contacts-auto-fill-button {
+    opacity: 0;
+  }
+}
+
+fieldset, img {
+  border: 0;
+}
